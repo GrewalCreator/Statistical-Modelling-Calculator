@@ -28,7 +28,7 @@ class Calculate(object):
         return local_std_variation
 
     @property
-    def get_std_variation(self) -> float:
+    def get_std_deviation(self) -> float:
         return self.calculate_standard_deviation()
 
     def calculate_quartile(self) -> list[float]:
@@ -71,13 +71,12 @@ class Calculate(object):
 
 
 def main():
-    data: list[float] = [2.71, 2.81, 2.81, 2.84, 2.84, 2.85, 2.86, 2.94, 2.95, 2.96, 2.97, 2.98, 2.98, 2.99, 3.03,
-                         3.05, 3.05, 3.06, 3.09, 3.11]
+    data: list[float] = [3, 12, 12, 14, 15, 16, 16, 18]
 
     calc = Calculate(data)
 
-    print(calc.get_all_quartiles)
-    print(calc.get_median())
+    print(calc.get_std_deviation)
+
 
 
 if __name__ == "__main__":
